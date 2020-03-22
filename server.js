@@ -18,10 +18,7 @@ app.use(express.static("public"));
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/workout";
 
 //Connecting/Creating my Db
-mongoose.connect(MONGODB_URI || "mongodb://localhost/budget", {
-  useNewUrlParser: true,
-  useFindAndModify: false
-});
+mongoose.connect(MONGODB_URI);
 
 // routes
 app.use(require("./routes/api.js"));
