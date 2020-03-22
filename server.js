@@ -15,7 +15,7 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/budgets";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/budget";
 
 //Connecting/Creating my Db
 mongoose.connect(MONGODB_URI);
